@@ -49,16 +49,3 @@ jobs:
           echo "image_tag=$IMAGE_TAG" >> $GITHUB_OUTPUT
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-
-      - name: Post Login to Amazon ECR
-        run: echo "Post Login to Amazon ECR"  >> $GITHUB_OUTPUT
-
-      - name: Post Configure AWS credentials
-        run: echo "Post Configure AWS credentials"  >> $GITHUB_OUTPUT
-
-      - name: Post Checkout source code
-        run: echo "Post Checkout source code"  >> $GITHUB_OUTPUT
-
-      - name: Complete job
-        run: echo "Complete job"  >> $GITHUB_OUTPUT
-
